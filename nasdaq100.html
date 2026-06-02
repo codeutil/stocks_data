@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>S&amp;P 500 Returns Over the Last 40 Years</title>
+    <title>Nasdaq 100 Returns Over the Last 40 Years</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="page-shell">
       <div class="index-switcher" role="group" aria-label="Index switcher">
-        <a class="active" href="index.html">S&amp;P 500</a>
+        <a href="index.html">S&amp;P 500</a>
         <a href="csi300.html">沪深300</a>
-        <a href="nasdaq100.html">Nasdaq 100</a>
+        <a class="active" href="nasdaq100.html">Nasdaq 100</a>
       </div>
       <nav class="top-nav" aria-label="Page views">
-        <a class="brand" href="#" aria-label="S&P 500 dashboard home">
-          <span class="brand-mark">S</span>
-          <strong>S&amp;P 500</strong>
+        <a class="brand" href="#" aria-label="Nasdaq 100 dashboard home">
+          <span class="brand-mark">N</span>
+          <strong>Nasdaq 100</strong>
         </a>
         <div class="nav-links" role="group" aria-label="Dashboard sections">
           <button type="button" class="active" data-view="overview" data-ui="navOverview">总览</button>
@@ -30,66 +30,66 @@
         <button class="language-toggle" type="button" id="languageToggle">EN / 中文</button>
       </nav>
 
-      <main class="poster" aria-label="S&P 500 returns and valuation views">
+      <main class="poster" aria-label="Nasdaq 100 returns and valuation views">
         <section class="view-panel active" id="overviewView" data-panel="overview">
           <section class="headline">
-            <p class="cn-title">标普500指数<span id="rangeLabelCn">1986-2025年</span>平均价格回报率为 <span id="avgLabel">10.6%</span></p>
-            <h1>S&amp;P 500</h1>
+            <p class="cn-title">纳斯达克100指数<span id="rangeLabelCn">1986-2025年</span>平均价格回报率为 <span id="avgLabel">16.7%</span></p>
+            <h1>Nasdaq 100</h1>
             <p class="subtitle" id="subtitle">RETURNS OVER 40 YEARS</p>
-            <p class="note">The S&amp;P 500 averaged <span id="avgLabelEn">10.6% annual price returns</span> from <span id="rangeLabelEn">1986 to 2025</span></p>
+            <p class="note">The Nasdaq 100 averaged <span id="avgLabelEn">16.7% annual price returns</span> from <span id="rangeLabelEn">1986 to 2025</span></p>
           </section>
 
-          <section class="returns-grid" id="returnsGrid" aria-label="Annual S&P 500 returns from 1985 to 2024">
+          <section class="returns-grid" id="returnsGrid" aria-label="Annual Nasdaq 100 returns from 1986 to 2025">
           </section>
         </section>
 
-        <section class="view-panel chart-view" id="pbView" data-panel="pb" aria-label="S&P 500 PB chart">
+        <section class="view-panel chart-view" id="pbView" data-panel="pb" aria-label="Nasdaq 100 PB chart">
           <header class="chart-header">
             <p data-ui="valuationChartTitle">估值折线图</p>
-            <h1>S&amp;P 500 PB</h1>
+            <h1>Nasdaq 100 PB</h1>
             <div class="chart-summary">
-              <span><span data-ui="current">当前</span> <strong id="pbChartCurrent">6.02x</strong></span>
-              <span><span data-ui="historicalAverage">历史均值</span> <strong id="pbChartAverage">3.16x</strong></span>
-              <span><span data-ui="historicalPercentile">历史百分位</span> <strong id="pbChartPercentile">100%</strong></span>
+              <span><span data-ui="current">当前</span> <strong id="pbChartCurrent">7.50x</strong></span>
+              <span><span data-ui="historicalAverage">历史均值</span> <strong id="pbChartAverage">4.10x</strong></span>
+              <span><span data-ui="historicalPercentile">历史百分位</span> <strong id="pbChartPercentile">97%</strong></span>
             </div>
           </header>
           <div class="line-chart" id="pbChart"></div>
         </section>
 
-        <section class="view-panel chart-view" id="peView" data-panel="pe" aria-label="S&P 500 PE chart">
+        <section class="view-panel chart-view" id="peView" data-panel="pe" aria-label="Nasdaq 100 PE chart">
           <header class="chart-header">
             <p data-ui="valuationChartTitle">估值折线图</p>
-            <h1>S&amp;P 500 PE</h1>
+            <h1>Nasdaq 100 PE</h1>
             <div class="chart-summary">
-              <span><span data-ui="current">当前</span> <strong id="peChartCurrent">32.67x</strong></span>
-              <span><span data-ui="historicalAverage">历史均值</span> <strong id="peChartAverage">16.22x</strong></span>
-              <span><span data-ui="historicalPercentile">历史百分位</span> <strong id="peChartPercentile">97%</strong></span>
+              <span><span data-ui="current">当前</span> <strong id="peChartCurrent">32.40x</strong></span>
+              <span><span data-ui="historicalAverage">历史均值</span> <strong id="peChartAverage">23.20x</strong></span>
+              <span><span data-ui="historicalPercentile">历史百分位</span> <strong id="peChartPercentile">88%</strong></span>
             </div>
           </header>
           <div class="line-chart" id="peChart"></div>
         </section>
 
-        <section class="view-panel chart-view" id="breadthView" data-panel="breadth" aria-label="S&P 500 market breadth chart">
+        <section class="view-panel chart-view" id="breadthView" data-panel="breadth" aria-label="Nasdaq 100 market breadth chart">
           <header class="chart-header">
             <p data-ui="navBreadth">市场宽度</p>
-            <h1>S&amp;P 500 Breadth</h1>
+            <h1>Nasdaq 100 Breadth</h1>
             <div class="chart-summary">
-              <span><span data-ui="ma50Label">MA50 上方股票</span> <strong id="breadthMa50">52.28%</strong></span>
-              <span><span data-ui="ma200Label">MA200 上方股票</span> <strong id="breadthMa200">55.26%</strong></span>
-              <span>S&amp;P 500 <strong id="breadthIndex">7580.06</strong></span>
+              <span><span data-ui="ma50Label">MA50 上方股票</span> <strong id="breadthMa50">56.10%</strong></span>
+              <span><span data-ui="ma200Label">MA200 上方股票</span> <strong id="breadthMa200">60.40%</strong></span>
+              <span>Nasdaq 100 <strong id="breadthIndex">22510.20</strong></span>
             </div>
           </header>
           <div class="line-chart breadth-chart" id="breadthChart"></div>
         </section>
 
-        <section class="view-panel extremes-view" id="extremesView" data-panel="extremes" aria-label="S&P 500 price extremes">
+        <section class="view-panel extremes-view" id="extremesView" data-panel="extremes" aria-label="Nasdaq 100 price extremes">
           <header class="chart-header">
             <p data-ui="extremeDataTitle">价格极端数据</p>
-            <h1>S&amp;P 500 Drawdowns</h1>
+            <h1>Nasdaq 100 Drawdowns</h1>
             <div class="chart-summary">
               <span><span data-ui="sample">样本</span> <strong id="extremeCount">0</strong></span>
-              <span><span data-ui="maxDrawdown">最大跌幅</span> <strong id="worstDrawdown">-86.2%</strong></span>
-              <span><span data-ui="longestDuration">最长持续</span> <strong id="longestDecline">61月</strong></span>
+              <span><span data-ui="maxDrawdown">最大跌幅</span> <strong id="worstDrawdown">-82.9%</strong></span>
+              <span><span data-ui="longestDuration">最长持续</span> <strong id="longestDecline">31月</strong></span>
             </div>
           </header>
           <div class="drawdown-table-wrap">
@@ -108,16 +108,16 @@
           </div>
         </section>
 
-        <section class="view-panel metrics-view" id="metricsView" data-panel="metrics" aria-label="S&P 500 metrics overview">
+        <section class="view-panel metrics-view" id="metricsView" data-panel="metrics" aria-label="Nasdaq 100 metrics overview">
           <header class="chart-header">
             <p data-ui="metricsTitle">指标总览</p>
-            <h1>S&amp;P 500 Metrics</h1>
+            <h1>Nasdaq 100 Metrics</h1>
             <div class="chart-summary">
               <span><span data-ui="built">已完成</span> <strong id="builtMetricCount">0</strong></span>
               <span><span data-ui="nextUp">优先补充</span> <strong id="priorityMetricCount">0</strong></span>
               <span><span data-ui="totalMetrics">全部指标</span> <strong id="totalMetricCount">0</strong></span>
             </div>
-            <p class="metrics-note" data-ui="metricsNote">已纳入前面提到的全部 S&amp;P 500 指标，并在右侧写入当前值或最近参考值。</p>
+            <p class="metrics-note" data-ui="metricsNote">已纳入前面提到的全部纳指100指标，并在右侧写入当前值或最近参考值。</p>
           </header>
           <div class="metrics-board" id="metricsBoard"></div>
         </section>
@@ -145,19 +145,19 @@
 
         <section class="stats" aria-label="Selected range statistics">
           <div><span data-ui="years">Years</span><strong id="countLabel">40</strong></div>
-          <div><span data-ui="average">Average</span><strong id="statAverage">10.6%</strong></div>
-          <div><span>CAGR</span><strong id="statCagr">9.2%</strong></div>
+          <div><span data-ui="average">Average</span><strong id="statAverage">16.7%</strong></div>
+          <div><span>CAGR</span><strong id="statCagr">14.2%</strong></div>
         </section>
 
-        <section class="valuation-panel" aria-label="S&P 500 valuation levels">
+        <section class="valuation-panel" aria-label="Nasdaq 100 valuation levels">
           <h2 data-ui="valuationLevel">估值水位</h2>
           <div class="valuation-grid">
-            <div><span data-ui="peAvg">PE 历史均值</span><strong id="peAverage">16.22x</strong></div>
-            <div><span data-ui="pbAvg">PB 历史均值</span><strong id="pbAverage">3.16x</strong></div>
-            <div><span data-ui="peNow">PE 当前</span><strong id="peCurrent">32.67x</strong></div>
-            <div><span data-ui="pbNow">PB 当前</span><strong id="pbCurrent">6.02x</strong></div>
-            <div><span data-ui="pePercentileLabel">PE 历史百分位</span><strong id="pePercentile">97%</strong></div>
-            <div><span data-ui="pbPercentileLabel">PB 历史百分位</span><strong id="pbPercentile">100%</strong></div>
+            <div><span data-ui="peAvg">PE 历史均值</span><strong id="peAverage">23.20x</strong></div>
+            <div><span data-ui="pbAvg">PB 历史均值</span><strong id="pbAverage">4.10x</strong></div>
+            <div><span data-ui="peNow">PE 当前</span><strong id="peCurrent">32.40x</strong></div>
+            <div><span data-ui="pbNow">PB 当前</span><strong id="pbCurrent">7.50x</strong></div>
+            <div><span data-ui="pePercentileLabel">PE 历史百分位</span><strong id="pePercentile">88%</strong></div>
+            <div><span data-ui="pbPercentileLabel">PB 历史百分位</span><strong id="pbPercentile">97%</strong></div>
           </div>
         </section>
 
@@ -165,16 +165,14 @@
 
         <footer class="source-note">
           Returns: price return only, dividends excluded.
-          Valuation percentile is based on annual historical observations. Multpl PE/PB, updated May 29, 2026.
+          Valuation percentile is based on annual historical observations. NDX PE/PB, updated May 29, 2026.
           Sources:
-          <a href="https://stocklists.co/lists/sp500-returns">StockLists returns</a>,
-          <a href="https://www.multpl.com/s-p-500-pe-ratio">Multpl PE</a>,
-          <a href="https://www.multpl.com/s-p-500-price-to-book">Multpl PB</a>,
-          <a href="https://en.macromicro.me/collections/16106/20Charts_344136/81081/S-P-500-Breadth">MacroMicro breadth</a>,
-          <a href="https://www.trendfollowing.com/pdfs/sp.pdf">drawdowns</a>.
+          <a href="https://www.slickcharts.com/nasdaq100">Slickcharts NDX returns</a>,
+          <a href="https://www.nasdaq.com/market-activity/quotes/nasdaq-ndx-index">Nasdaq Official</a>,
+          <a href="https://www.multpl.com">Multpl Valuation</a>.
         </footer>
       </aside>
     </div>
-    <script src="sp500-poster.js?v=20260602-data-date"></script>
+    <script src="nasdaq100-poster.js?v=20260602-data-date"></script>
   </body>
 </html>

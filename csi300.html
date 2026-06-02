@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>沪深300 Returns Over the Last 21 Years</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="index-switcher" role="group" aria-label="Index switcher">
+        <a href="index.html">S&amp;P 500</a>
+        <a class="active" href="csi300.html">沪深300</a>
+        <a href="nasdaq100.html">Nasdaq 100</a>
+      </div>
+      <nav class="top-nav" aria-label="Page views">
+        <a class="brand" href="#" aria-label="CSI 300 dashboard home">
+          <span class="brand-mark">沪</span>
+          <strong>沪深300</strong>
+        </a>
+        <div class="nav-links" role="group" aria-label="Dashboard sections">
+          <button type="button" class="active" data-view="overview" data-ui="navOverview">总览</button>
+          <button type="button" data-view="pb">PB</button>
+          <button type="button" data-view="pe">PE</button>
+          <button type="button" data-view="breadth" data-ui="navBreadth">市场宽度</button>
+          <button type="button" data-view="extremes" data-ui="navExtremes">价格极端</button>
+          <button type="button" data-view="metrics" data-ui="navMetrics">指标总览</button>
+        </div>
+        <div class="data-date-badge" data-ui="dataAsOf">数据截止：2026-05-29｜非实时</div>
+        <button class="language-toggle" type="button" id="languageToggle">EN / 中文</button>
+      </nav>
+
+      <main class="poster" aria-label="CSI 300 returns and valuation views">
+        <section class="view-panel active" id="overviewView" data-panel="overview">
+          <section class="headline">
+            <p class="cn-title">沪深300指数<span id="rangeLabelCn">2005-2025年</span>平均价格回报率为 <span id="avgLabel">13.7%</span></p>
+            <h1>CSI 300</h1>
+            <p class="subtitle" id="subtitle">RETURNS OVER 21 YEARS</p>
+            <p class="note">The CSI 300 averaged <span id="avgLabelEn">13.7% annual price returns</span> from <span id="rangeLabelEn">2005 to 2025</span></p>
+          </section>
+
+          <section class="returns-grid" id="returnsGrid" aria-label="Annual CSI 300 returns from 2005 to 2025">
+          </section>
+        </section>
+
+        <section class="view-panel chart-view" id="pbView" data-panel="pb" aria-label="CSI 300 PB chart">
+          <header class="chart-header">
+            <p data-ui="valuationChartTitle">估值折线图</p>
+            <h1>CSI 300 PB</h1>
+            <div class="chart-summary">
+              <span><span data-ui="current">当前</span> <strong id="pbChartCurrent">1.39x</strong></span>
+              <span><span data-ui="historicalAverage">历史均值</span> <strong id="pbChartAverage">1.70x</strong></span>
+              <span><span data-ui="historicalPercentile">历史百分位</span> <strong id="pbChartPercentile">48%</strong></span>
+            </div>
+          </header>
+          <div class="line-chart" id="pbChart"></div>
+        </section>
+
+        <section class="view-panel chart-view" id="peView" data-panel="pe" aria-label="CSI 300 PE chart">
+          <header class="chart-header">
+            <p data-ui="valuationChartTitle">估值折线图</p>
+            <h1>CSI 300 PE</h1>
+            <div class="chart-summary">
+              <span><span data-ui="current">当前</span> <strong id="peChartCurrent">12.40x</strong></span>
+              <span><span data-ui="historicalAverage">历史均值</span> <strong id="peChartAverage">12.50x</strong></span>
+              <span><span data-ui="historicalPercentile">历史百分位</span> <strong id="peChartPercentile">33%</strong></span>
+            </div>
+          </header>
+          <div class="line-chart" id="peChart"></div>
+        </section>
+
+        <section class="view-panel chart-view" id="breadthView" data-panel="breadth" aria-label="CSI 300 market breadth chart">
+          <header class="chart-header">
+            <p data-ui="navBreadth">市场宽度</p>
+            <h1>CSI 300 Breadth</h1>
+            <div class="chart-summary">
+              <span><span data-ui="ma50Label">MA50 上方股票</span> <strong id="breadthMa50">51.30%</strong></span>
+              <span><span data-ui="ma200Label">MA200 上方股票</span> <strong id="breadthMa200">48.60%</strong></span>
+              <span>CSI 300 <strong id="breadthIndex">4035.20</strong></span>
+            </div>
+          </header>
+          <div class="line-chart breadth-chart" id="breadthChart"></div>
+        </section>
+
+        <section class="view-panel extremes-view" id="extremesView" data-panel="extremes" aria-label="CSI 300 price extremes">
+          <header class="chart-header">
+            <p data-ui="extremeDataTitle">价格极端数据</p>
+            <h1>CSI 300 Drawdowns</h1>
+            <div class="chart-summary">
+              <span><span data-ui="sample">样本</span> <strong id="extremeCount">0</strong></span>
+              <span><span data-ui="maxDrawdown">最大跌幅</span> <strong id="worstDrawdown">-73.8%</strong></span>
+              <span><span data-ui="longestDuration">最长持续</span> <strong id="longestDecline">20月</strong></span>
+            </div>
+          </header>
+          <div class="drawdown-table-wrap">
+            <table class="drawdown-table">
+              <thead>
+                <tr>
+                  <th data-i18n="event">事件</th>
+                  <th data-i18n="peak">峰值</th>
+                  <th data-i18n="trough">低点</th>
+                  <th data-i18n="duration">持续时间</th>
+                  <th data-i18n="decline">跌幅</th>
+                </tr>
+              </thead>
+              <tbody id="drawdownTable"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="view-panel metrics-view" id="metricsView" data-panel="metrics" aria-label="CSI 300 metrics overview">
+          <header class="chart-header">
+            <p data-ui="metricsTitle">指标总览</p>
+            <h1>CSI 300 Metrics</h1>
+            <div class="chart-summary">
+              <span><span data-ui="built">已完成</span> <strong id="builtMetricCount">0</strong></span>
+              <span><span data-ui="nextUp">优先补充</span> <strong id="priorityMetricCount">0</strong></span>
+              <span><span data-ui="totalMetrics">全部指标</span> <strong id="totalMetricCount">0</strong></span>
+            </div>
+            <p class="metrics-note" data-ui="metricsNote">已纳入前面提到的全部沪深300指标，并在右侧写入当前值或最近参考值。</p>
+          </header>
+          <div class="metrics-board" id="metricsBoard"></div>
+        </section>
+      </main>
+
+      <aside class="sidebar" aria-label="Return range controls and statistics">
+        <section class="controls" aria-label="Select year range">
+          <div class="quick-ranges" role="group" aria-label="Quick year ranges">
+            <button type="button" data-years="5" data-range-label="5">近5年</button>
+            <button type="button" data-years="15" data-range-label="15" class="active">近15年</button>
+            <button type="button" data-years="5" data-range-label="5">近5年</button>
+            <button type="button" data-years="5" data-range-label="5">近5年</button>
+          </div>
+          <div class="year-selectors">
+            <label>
+              <span data-ui="start">起始</span>
+              <select id="startYear"></select>
+            </label>
+            <label>
+              <span data-ui="end">结束</span>
+              <select id="endYear"></select>
+            </label>
+          </div>
+        </section>
+
+        <section class="stats" aria-label="Selected range statistics">
+          <div><span data-ui="years">Years</span><strong id="countLabel">21</strong></div>
+          <div><span data-ui="average">Average</span><strong id="statAverage">13.7%</strong></div>
+          <div><span>CAGR</span><strong id="statCagr">8.6%</strong></div>
+        </section>
+
+        <section class="valuation-panel" aria-label="CSI 300 valuation levels">
+          <h2 data-ui="valuationLevel">估值水位</h2>
+          <div class="valuation-grid">
+            <div><span data-ui="peAvg">PE 历史均值</span><strong id="peAverage">12.50x</strong></div>
+            <div><span data-ui="pbAvg">PB 历史均值</span><strong id="pbAverage">1.70x</strong></div>
+            <div><span data-ui="peNow">PE 当前</span><strong id="peCurrent">12.40x</strong></div>
+            <div><span data-ui="pbNow">PB 当前</span><strong id="pbCurrent">1.39x</strong></div>
+            <div><span data-ui="pePercentileLabel">PE 历史百分位</span><strong id="pePercentile">33%</strong></div>
+            <div><span data-ui="pbPercentileLabel">PB 历史百分位</span><strong id="pbPercentile">48%</strong></div>
+          </div>
+        </section>
+
+        <button class="download-button" type="button" id="downloadPoster" data-ui="download">下载图片</button>
+
+        <footer class="source-note">
+          Returns: price return only, dividends excluded.
+          Valuation percentile is based on annual historical observations. CSI 300 PE/PB, updated May 29, 2026.
+          Sources:
+          <a href="https://www.csindex.com.cn/zh-CN/indices/index-detail/000300">CSI Index Co.</a>,
+          <a href="https://danjuanapp.com/dj-valuation-table-detail/SH000300">Danjuan PE/PB</a>,
+          <a href="https://xueqiu.com">Xueqiu historical returns</a>.
+        </footer>
+      </aside>
+    </div>
+    <script src="csi300-poster.js?v=20260602-data-date"></script>
+  </body>
+</html>
