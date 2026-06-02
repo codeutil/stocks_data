@@ -1017,3 +1017,51 @@ select {
     font-size: 46px;
   }
 }
+
+/* === Cross-Index Switcher === */
+.index-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, rgba(247, 51, 72, 0.08), rgba(15, 23, 42, 0.04));
+  border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.index-switcher a {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  transition: background 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+
+.index-switcher a:hover {
+  background: rgba(247, 51, 72, 0.08);
+  color: #f73348;
+  border-color: rgba(247, 51, 72, 0.3);
+}
+
+.index-switcher a.active {
+  background: #f73348;
+  color: #ffffff;
+  border-color: #f73348;
+  box-shadow: 0 6px 16px -8px rgba(247, 51, 72, 0.5);
+}
+
+@media (max-width: 720px) {
+  .index-switcher {
+    padding: 8px 16px;
+    flex-wrap: wrap;
+  }
+  .index-switcher a {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
