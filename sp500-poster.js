@@ -368,6 +368,7 @@ const metricGroups = [
 const uiCopy = {
   zh: {
     langButton: "EN / 中文",
+    dataAsOf: "数据截止：2026-05-29｜非实时",
     navOverview: "总览",
     navBreadth: "市场宽度",
     navExtremes: "价格极端",
@@ -420,6 +421,7 @@ const uiCopy = {
   },
   en: {
     langButton: "中文 / EN",
+    dataAsOf: "Data as of May 29, 2026 | Not real-time",
     navOverview: "Overview",
     navBreadth: "Breadth",
     navExtremes: "Price Extremes",
