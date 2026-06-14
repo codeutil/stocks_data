@@ -33,10 +33,10 @@
       <main class="poster" aria-label="S&P 500 returns and valuation views">
         <section class="view-panel active" id="overviewView" data-panel="overview">
           <section class="headline">
-            <p class="cn-title">标普500指数<span id="rangeLabelCn">1986-2025年</span>平均价格回报率为 <span id="avgLabel">10.4%</span></p>
+            <p class="cn-title">标普500指数<span id="rangeLabelCn">1986-2025年</span>含股息复合年化回报率为 <span id="avgLabel">11.5%</span></p>
             <h1>S&amp;P 500</h1>
             <p class="subtitle" id="subtitle">RETURNS OVER 40 YEARS</p>
-            <p class="note">The S&amp;P 500 averaged <span id="avgLabelEn">10.4% annual price returns</span> from <span id="rangeLabelEn">1986 to 2025</span></p>
+            <p class="note">The S&amp;P 500 compounded at <span id="avgLabelEn">11.5% annually with dividends reinvested</span> from <span id="rangeLabelEn">1986 to 2025</span></p>
           </section>
 
           <section class="returns-grid" id="returnsGrid" aria-label="Annual S&P 500 returns from 1985 to 2024">
@@ -145,8 +145,11 @@
 
         <section class="stats" aria-label="Selected range statistics">
           <div><span data-ui="years">Years</span><strong id="countLabel">40</strong></div>
-          <div><span data-ui="average">Average</span><strong id="statAverage">10.4%</strong></div>
-          <div><span>CAGR</span><strong id="statCagr">9.2%</strong></div>
+          <div><span data-ui="average">算术平均</span><strong id="statAverage">10.4%</strong></div>
+          <div><span data-ui="compoundAnnualReturn">复合年化回报率（不含股息）</span><strong id="statCagr">9.1%</strong></div>
+          <div><span data-ui="compoundAnnualReturnWithDividends">复合年化回报率（含股息再投入）</span><strong id="statCagrWithDividends">11.5%</strong></div>
+          <div><span data-ui="totalReturn">Total Return</span><strong id="statTotalReturn">3139.9%</strong></div>
+          <div><span data-ui="totalReturnWithDividends">总回报率（含股息再投入）</span><strong id="statTotalReturnWithDividends">7593.7%</strong></div>
         </section>
 
         <section class="valuation-panel" aria-label="S&P 500 valuation levels">
@@ -164,10 +167,10 @@
         <button class="download-button" type="button" id="downloadPoster" data-ui="download">下载图片</button>
 
         <footer class="source-note">
-          Returns: price return only, dividends excluded.
+          Returns: price return excludes dividends; dividend-reinvested total return is shown separately.
           Valuation percentile is based on annual historical observations. Multpl PE/PB, updated May 29, 2026.
           Sources:
-          <a href="https://www.slickcharts.com/sp500/returns/details">Slickcharts price returns</a>,
+          <a href="https://www.slickcharts.com/sp500/returns/details">Slickcharts returns</a>,
           <a href="https://www.multpl.com/s-p-500-pe-ratio">Multpl PE</a>,
           <a href="https://www.multpl.com/s-p-500-price-to-book">Multpl PB</a>,
           <a href="https://en.macromicro.me/collections/16106/20Charts_344136/81081/S-P-500-Breadth">MacroMicro breadth</a>,

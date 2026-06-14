@@ -99,6 +99,107 @@ const returns = [
   { year: 2025, value: 16.39 },
 ];
 
+const totalReturns = [
+  { year: 1928, value: 43.61 },
+  { year: 1929, value: -8.42 },
+  { year: 1930, value: -24.9 },
+  { year: 1931, value: -43.34 },
+  { year: 1932, value: -8.19 },
+  { year: 1933, value: 53.99 },
+  { year: 1934, value: -1.44 },
+  { year: 1935, value: 47.67 },
+  { year: 1936, value: 33.92 },
+  { year: 1937, value: -35.03 },
+  { year: 1938, value: 31.12 },
+  { year: 1939, value: -0.41 },
+  { year: 1940, value: -9.78 },
+  { year: 1941, value: -11.59 },
+  { year: 1942, value: 20.34 },
+  { year: 1943, value: 25.9 },
+  { year: 1944, value: 19.75 },
+  { year: 1945, value: 36.44 },
+  { year: 1946, value: -8.07 },
+  { year: 1947, value: 5.71 },
+  { year: 1948, value: 5.5 },
+  { year: 1949, value: 18.79 },
+  { year: 1950, value: 31.71 },
+  { year: 1951, value: 24.02 },
+  { year: 1952, value: 18.37 },
+  { year: 1953, value: -0.99 },
+  { year: 1954, value: 52.62 },
+  { year: 1955, value: 31.56 },
+  { year: 1956, value: 6.56 },
+  { year: 1957, value: -10.78 },
+  { year: 1958, value: 43.36 },
+  { year: 1959, value: 11.96 },
+  { year: 1960, value: 0.47 },
+  { year: 1961, value: 26.89 },
+  { year: 1962, value: -8.73 },
+  { year: 1963, value: 22.8 },
+  { year: 1964, value: 16.48 },
+  { year: 1965, value: 12.45 },
+  { year: 1966, value: -10.06 },
+  { year: 1967, value: 23.98 },
+  { year: 1968, value: 11.06 },
+  { year: 1969, value: -8.5 },
+  { year: 1970, value: 4.01 },
+  { year: 1971, value: 14.31 },
+  { year: 1972, value: 18.98 },
+  { year: 1973, value: -14.66 },
+  { year: 1974, value: -26.47 },
+  { year: 1975, value: 37.2 },
+  { year: 1976, value: 23.84 },
+  { year: 1977, value: -7.18 },
+  { year: 1978, value: 6.56 },
+  { year: 1979, value: 18.44 },
+  { year: 1980, value: 32.42 },
+  { year: 1981, value: -4.91 },
+  { year: 1982, value: 21.55 },
+  { year: 1983, value: 22.56 },
+  { year: 1984, value: 6.27 },
+  { year: 1985, value: 31.73 },
+  { year: 1986, value: 18.67 },
+  { year: 1987, value: 5.25 },
+  { year: 1988, value: 16.61 },
+  { year: 1989, value: 31.69 },
+  { year: 1990, value: -3.1 },
+  { year: 1991, value: 30.47 },
+  { year: 1992, value: 7.62 },
+  { year: 1993, value: 10.08 },
+  { year: 1994, value: 1.32 },
+  { year: 1995, value: 37.58 },
+  { year: 1996, value: 22.96 },
+  { year: 1997, value: 33.36 },
+  { year: 1998, value: 28.58 },
+  { year: 1999, value: 21.04 },
+  { year: 2000, value: -9.1 },
+  { year: 2001, value: -11.89 },
+  { year: 2002, value: -22.1 },
+  { year: 2003, value: 28.68 },
+  { year: 2004, value: 10.88 },
+  { year: 2005, value: 4.91 },
+  { year: 2006, value: 15.79 },
+  { year: 2007, value: 5.49 },
+  { year: 2008, value: -37.0 },
+  { year: 2009, value: 26.46 },
+  { year: 2010, value: 15.06 },
+  { year: 2011, value: 2.11 },
+  { year: 2012, value: 16.0 },
+  { year: 2013, value: 32.39 },
+  { year: 2014, value: 13.69 },
+  { year: 2015, value: 1.38 },
+  { year: 2016, value: 11.96 },
+  { year: 2017, value: 21.83 },
+  { year: 2018, value: -4.38 },
+  { year: 2019, value: 31.49 },
+  { year: 2020, value: 18.4 },
+  { year: 2021, value: 28.71 },
+  { year: 2022, value: -18.11 },
+  { year: 2023, value: 26.29 },
+  { year: 2024, value: 25.02 },
+  { year: 2025, value: 17.88 },
+];
+
 const valuations = {
   pe: {
     average: 16.22,
@@ -320,6 +421,10 @@ const metricGroups = [
     titleEn: "Price Trend",
     items: [
       { zh: "年度回报", en: "Annual Returns", value: "10.4% avg", status: "done" },
+      { zh: "复合年化回报率（不含股息）", en: "Compound Annual Return, Price Only", value: "9.1%", status: "done" },
+      { zh: "复合年化回报率（含股息再投入）", en: "Compound Annual Return with Dividends Reinvested", value: "11.5%", status: "done" },
+      { zh: "总回报率", en: "Total Return", value: "3139.9%", status: "done" },
+      { zh: "总回报率（含股息再投入）", en: "Total Return with Dividends Reinvested", value: "7593.7%", status: "done" },
       { zh: "价格极端回撤", en: "Extreme Drawdowns", value: "-86.2%", status: "done" },
       { zh: "S&P 500 Index Price", en: "S&P 500 Index Price", value: "7580.06", status: "todo" },
       { zh: "200日均线距离", en: "Distance to 200D MA", value: "+13.8%", status: "todo" },
@@ -392,7 +497,11 @@ const uiCopy = {
     maxDrawdown: "最大跌幅",
     longestDuration: "最长持续",
     years: "年数",
-    average: "平均",
+    average: "算术平均",
+    compoundAnnualReturn: "复合年化回报率（不含股息）",
+    compoundAnnualReturnWithDividends: "复合年化回报率（含股息再投入）",
+    totalReturn: "总回报率",
+    totalReturnWithDividends: "总回报率（含股息再投入）",
     start: "起始",
     end: "结束",
     valuationLevel: "估值水位",
@@ -445,7 +554,11 @@ const uiCopy = {
     maxDrawdown: "Max Drawdown",
     longestDuration: "Longest Decline",
     years: "Years",
-    average: "Average",
+    average: "Arithmetic Average",
+    compoundAnnualReturn: "Compound Annual Return, Price Only",
+    compoundAnnualReturnWithDividends: "Compound Annual Return with Dividends Reinvested",
+    totalReturn: "Total Return",
+    totalReturnWithDividends: "Total Return with Dividends Reinvested",
     start: "Start",
     end: "End",
     valuationLevel: "Valuation Level",
@@ -494,6 +607,9 @@ const labels = {
   count: document.querySelector("#countLabel"),
   statAverage: document.querySelector("#statAverage"),
   statCagr: document.querySelector("#statCagr"),
+  statCagrWithDividends: document.querySelector("#statCagrWithDividends"),
+  statTotalReturn: document.querySelector("#statTotalReturn"),
+  statTotalReturnWithDividends: document.querySelector("#statTotalReturnWithDividends"),
   peAverage: document.querySelector("#peAverage"),
   peCurrent: document.querySelector("#peCurrent"),
   pePercentile: document.querySelector("#pePercentile"),
@@ -550,11 +666,17 @@ function selectedReturns() {
   return returns.filter((item) => item.year >= start && item.year <= end);
 }
 
+function selectedTotalReturns() {
+  const { start, end } = selectedRange();
+  return totalReturns.filter((item) => item.year >= start && item.year <= end);
+}
+
 function calculateStats(items) {
   const average = items.reduce((sum, item) => sum + item.value, 0) / items.length;
   const growth = items.reduce((total, item) => total * (1 + item.value / 100), 1);
   const cagr = (growth ** (1 / items.length) - 1) * 100;
-  return { average, cagr };
+  const totalReturn = (growth - 1) * 100;
+  return { average, cagr, totalReturn };
 }
 
 function cardClass(value) {
@@ -569,20 +691,24 @@ function shade(value) {
 
 function render() {
   const items = selectedReturns();
-  const { average, cagr } = calculateStats(items);
+  const { average, cagr, totalReturn } = calculateStats(items);
+  const totalStatsWithDividends = calculateStats(selectedTotalReturns());
   const start = items[0].year;
   const end = items[items.length - 1].year;
   const count = items.length;
   const copy = uiCopy[language];
 
-  labels.avg.textContent = formatPercent(average);
-  labels.avgEn.textContent = `${formatPercent(average)} annual price returns`;
+  labels.avg.textContent = formatPercent(totalStatsWithDividends.cagr);
+  labels.avgEn.textContent = `${formatPercent(totalStatsWithDividends.cagr)} annually with dividends reinvested`;
   labels.rangeCn.textContent = `${start}-${end}年`;
   labels.rangeEn.textContent = `${start} to ${end}`;
   labels.subtitle.textContent = `RETURNS OVER ${count} ${count === 1 ? "YEAR" : "YEARS"}`;
   labels.count.textContent = count;
   labels.statAverage.textContent = formatPercent(average);
   labels.statCagr.textContent = formatPercent(cagr);
+  labels.statCagrWithDividends.textContent = formatPercent(totalStatsWithDividends.cagr);
+  labels.statTotalReturn.textContent = formatPercent(totalReturn);
+  labels.statTotalReturnWithDividends.textContent = formatPercent(totalStatsWithDividends.totalReturn);
   labels.peAverage.textContent = `${valuations.pe.average.toFixed(2)}x`;
   labels.peCurrent.textContent = `${valuations.pe.current.toFixed(2)}x`;
   labels.pePercentile.textContent = `${valuations.pe.percentile}%`;
@@ -884,7 +1010,7 @@ async function downloadPoster() {
 
 function drawPosterCanvas() {
   const items = selectedReturns();
-  const { average } = calculateStats(items);
+  const dividendCagr = calculateStats(selectedTotalReturns()).cagr;
   const start = items[0].year;
   const end = items[items.length - 1].year;
   const count = items.length;
@@ -907,7 +1033,7 @@ function drawPosterCanvas() {
   ctx.scale(scale, scale);
 
   drawBackground(ctx, width, height);
-  drawHeader(ctx, width, { average, start, end, count });
+  drawHeader(ctx, width, { dividendCagr, start, end, count });
   items.forEach((item, index) => {
     const col = index % columns;
     const row = Math.floor(index / columns);
@@ -929,16 +1055,16 @@ function drawBackground(ctx, width, height) {
   ctx.fillRect(0, 0, width, height);
 }
 
-function drawHeader(ctx, width, { average, start, end, count }) {
+function drawHeader(ctx, width, { dividendCagr, start, end, count }) {
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
 
-  drawText(ctx, `标普500指数${start}-${end}年平均价格回报率为`, width / 2, 48, 32, "#ffffff", 900);
-  drawText(ctx, formatPercent(average), width / 2, 94, 42, "#8df2f1", 900);
+  drawText(ctx, `标普500指数${start}-${end}年含股息复合年化回报率为`, width / 2, 48, 28, "#ffffff", 900);
+  drawText(ctx, formatPercent(dividendCagr), width / 2, 94, 42, "#8df2f1", 900);
   drawText(ctx, "S&P 500", width / 2, 210, 112, "#f73348", 900, "Arial Black, Arial");
   drawText(ctx, `RETURNS OVER ${count} ${count === 1 ? "YEAR" : "YEARS"}`, width / 2, 335, 37, "#ffffff", 900);
-  drawText(ctx, "The S&P 500 averaged", width / 2, 405, 22, "#ffffff", 800);
-  drawText(ctx, `${formatPercent(average)} annual price returns from ${start} to ${end}`, width / 2, 440, 25, "#8df2f1", 900);
+  drawText(ctx, "The S&P 500 compounded at", width / 2, 405, 22, "#ffffff", 800);
+  drawText(ctx, `${formatPercent(dividendCagr)} annually with dividends reinvested from ${start} to ${end}`, width / 2, 440, 21, "#8df2f1", 900);
 }
 
 function drawReturnCard(ctx, item, x, y, width, height) {
